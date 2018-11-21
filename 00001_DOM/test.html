@@ -1,0 +1,26 @@
+/*<output#*/
+<html>
+  <head>
+    <title>page title</title>
+  </head>
+  <body>
+    <strong id="message">hello</strong>
+    <script src="foo.js"></script>
+  </body>
+</html>
+/*#output>*/
+
+/*<tests#*/
+it("modifies the main message", function() {
+	oldDocument.querySelector("#message").innerHTML.should.be.eql("hello");
+	document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
+});
+
+it("calls alert() saying hey", function() {
+  _last_alert_message_.should.eql("Hey!!");
+});
+/*#tests>*/
+
+/*<options#*/
+output_ignore_scripts: true
+/*#options>*/
