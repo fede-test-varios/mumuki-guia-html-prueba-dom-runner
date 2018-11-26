@@ -18,12 +18,14 @@ it("modifies the main message", function() {
 it("calls alert() saying hello", function() {
   // _last_alert_message_.should.eql("Hey!!");
   _confirm_response_ = true;
+  _dispatch_('load', document);
   _last_alert_message_.should.be.eql("hola");
 });
 
 it("calls alert() saying bye", function() {
   // _last_alert_message_.should.eql("Hey!!");
   _confirm_response_ = false;
+  _dispatch_('load', document);
   _last_alert_message_.should.be.eql("chau");
 });
 /*#tests>*/
