@@ -12,12 +12,12 @@
 /*<tests#*/
 it("modifies the main message", function() {
 	oldDocument.querySelector("#message").innerHTML.should.be.eql("hello");
-	document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
+	window.document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
 });
 
 it("calls alert() saying hey", function() {
   // _last_alert_message_.should.eql("Hey!!");
-  document.a().should.be.eql(1)
+  window.a().should.be.eql(1)
 });
 /*#tests>*/
 /*<options#*/
