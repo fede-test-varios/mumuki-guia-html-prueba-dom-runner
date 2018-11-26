@@ -12,7 +12,7 @@
 /*<tests#*/
 it("modifies the main message", function() {
 	oldDocument.querySelector("#message").innerHTML.should.be.eql("hello");
-	window.document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
+	document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
 });
 
 it("calls alert() saying hello", function() {
