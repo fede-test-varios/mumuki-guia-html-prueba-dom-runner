@@ -15,9 +15,16 @@ it("modifies the main message", function() {
 	window.document.querySelector("#message").innerHTML.should.be.eql("I changed it from JS!");
 });
 
-it("calls alert() saying hey", function() {
+it("calls alert() saying hello", function() {
   // _last_alert_message_.should.eql("Hey!!");
-  _last_confirm_response_.should.be.eql(true);
+  _confirm_response_ = true;
+  _last_alert_message_.should.be.eql("hola");
+});
+
+it("calls alert() saying bye", function() {
+  // _last_alert_message_.should.eql("Hey!!");
+  _confirm_response_ = false;
+  _last_alert_message_.should.be.eql("chau");
 });
 /*#tests>*/
 /*<options#*/
